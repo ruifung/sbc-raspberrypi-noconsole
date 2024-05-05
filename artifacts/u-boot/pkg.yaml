@@ -34,6 +34,7 @@ steps:
         patch -p1 < /pkg/patches/0006-nvme-Use-pointer-for-CPU-addressed-buffers.patch
         patch -p1 < /pkg/patches/0007-nvme-translate-virtual-addresses-into-the-bus-s-addr.patch
         patch -p1 < /pkg/patches/0008-enable-nvme-and-fixup-efi-boot.patch
+        patch -p1 < /pkg/patches/0009-Disable-console-output-for-rpi_arm64_defconfig.patch
 
         make rpi_arm64_defconfig
     build:

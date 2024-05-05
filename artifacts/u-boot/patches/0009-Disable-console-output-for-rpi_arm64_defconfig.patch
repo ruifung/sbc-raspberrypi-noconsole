@@ -1,0 +1,26 @@
+From b15fb6d4b374038823a8418434a9ed0c63d63cf6 Mon Sep 17 00:00:00 2001
+From: Yip Rui Fung <rf@yrf.me>
+Date: Sun, 5 May 2024 08:20:08 +0800
+Subject: [PATCH 6/6] Disable console output for rpi_arm64_defconfig
+
+---
+ configs/rpi_arm64_defconfig | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/configs/rpi_arm64_defconfig b/configs/rpi_arm64_defconfig
+index f9dade18..d93457e4 100644
+--- a/configs/rpi_arm64_defconfig
++++ b/configs/rpi_arm64_defconfig
+@@ -73,3 +73,9 @@ CONFIG_BOOTMETH_SCRIPT=n
+ CONFIG_PXE_UTILS=n
+ # Disable EFI bootmanager (reserves memory on 0x00080000 -> prevents continuing after being successful)
+ CONFIG_CMD_BOOTEFI_BOOTMGR=n
++# Disable Console Output
++CONFIG_BOOTDELAY=-2
++CONFIG_SILENT_CONSOLE=y
++CONFIG_SYS_DEVICE_NULLDEV=y
++CONFIG_SILENT_CONSOLE_UPDATE_ON_SET=y
++CONFIG_SILENT_U_BOOT_ONLY=y
+-- 
+2.39.1.windows.1
+

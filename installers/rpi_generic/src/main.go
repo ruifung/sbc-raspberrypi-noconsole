@@ -33,7 +33,6 @@ func (i *RpiInstaller) GetOptions(extra rpiOptions) (overlay.Options, error) {
 		Name: "rpi_generic",
 		KernelArgs: []string{
 			"console=tty0",
-			"console=ttyAMA0,115200",
 			"sysctl.kernel.kexec_load_disabled=1",
 			"talos.dashboard.disabled=1",
 		},
