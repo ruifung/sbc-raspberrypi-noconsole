@@ -1,0 +1,17 @@
+diff --git a/board/raspberrypi/rpi/rpi.env b/board/raspberrypi/rpi/rpi.env
+index 30228285..1c663421 100644
+--- a/board/raspberrypi/rpi/rpi.env
++++ b/board/raspberrypi/rpi/rpi.env
+@@ -5,9 +5,9 @@
+ dhcpuboot=usb start; dhcp u-boot.uimg; bootm
+ 
+ /* Environment */
+-stdin=serial,usbkbd
+-stdout=serial,vidconsole
+-stderr=serial,vidconsole
++stdin=usbkbd
++stdout=vidconsole
++stderr=vidconsole
+ 
+ /* DFU over USB/UDC */
+ #ifdef CONFIG_CMD_DFU
